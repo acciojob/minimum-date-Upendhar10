@@ -1,5 +1,18 @@
 function minDate(dates) {
-  //write you code here
+  /*
+	  - These strings follow ISO-like date format, which makes lexicographic comparison (string comparison) possible.
+      - Because in this format, "2023/02/01" will naturally come before "2023/03/01" when compared as strings.
+  */
+	let minDatee = dates[0];
+	for(let i=1; i<dates.length; i++){
+		let currDate = dates[i];
+		if(currDate < minDatee){
+			minDatee = currDate;
+		}
+	}
+
+	// console.log(minDatee);
+	return minDatee;
 }
 
 // Do not change the code
